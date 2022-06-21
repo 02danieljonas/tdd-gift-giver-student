@@ -5,6 +5,7 @@ const giftExchangeRouter = require("./routes/gift-exchange.js");
 const app = express();
 
 app.use(morgan("tiny"));
+app.use(express.json())
 app.use("/gift-exchange", giftExchangeRouter);
 
 app.get("/", async (req, res, next) => {
