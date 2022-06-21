@@ -1,3 +1,5 @@
+const { BadRequestError } = require("../utils/errors.js");
+
 class GiftExchange {
     static traditional(names) {
         const shuffleArray = (array) => {
@@ -14,7 +16,9 @@ class GiftExchange {
 
         for (let i = 0; i < names.length; i++) {
             if (i < names.length - 1) {
-                giverReceiver.push(`${names[i]} is giving a gift to ${names[i + 1]}`);
+                giverReceiver.push(
+                    `${names[i]} is giving a gift to ${names[i + 1]}`
+                );
             } else {
                 giverReceiver.push(
                     `${names[names.length - 1]} is giving a gift to ${names[0]}`
@@ -25,6 +29,10 @@ class GiftExchange {
     }
 
     static pairs(names) {
+        if (names.length % 2 != 0) {
+            throw new BadRequestError("Please provide an even number of names");
+        }
+
         const shuffleArray = (array) => {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
