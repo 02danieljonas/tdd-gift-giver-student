@@ -47,10 +47,8 @@ class GiftExchange {
         for (let i = 0; i < names.length; i++) {
             if (i % 2 == 0) {
                 namePair.push([names[i], names[i + 1]]);
-                // console.log(names[i], names[i + 1]);
             }
         }
-        // console.log(namePair);
 
         return namePair;
     }

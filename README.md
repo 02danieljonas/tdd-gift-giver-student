@@ -9,20 +9,20 @@ Your client thinks they have a few killer features that could improve on elfster
 ### Goals
 
 By the end of this lab you will be able to... 
-- [ ] Build a RESTful API with Node and Express that accepts `POST` and `GET` requests
-- [ ] Collect data from a URL using `request.params` and from the body using `request.body`
-- [ ] Anticipate and implement error handling methods. 
+- [X] Build a RESTful API with Node and Express that accepts `POST` and `GET` requests
+- [X] Collect data from a URL using `request.params` and from the body using `request.body`
+- [X] Anticipate and implement error handling methods. 
 
 ### Application Features
 
 #### Core feature:
 
-- [ ] Node/Express API written in JavaScript
-- [ ] Code to create the Express application and wire up the middleware should be written in the `app.js` file
-- [ ] Code to run the API located in the `server.js` file, where it sould import the Express application from the `app.js` code and then make sure it listens on port `3000`.
-- [ ] A `GiftExchange` model that implements two different gift-exchange algorithms.
-- [ ] An Express router living at the `/gift-exchange` endpoint to handle requests for the two different algorithms
-- [ ] Logging and error-handling middleware to enable more seamless interaction with the API
+- [X] Node/Express API written in JavaScript
+- [X] Code to create the Express application and wire up the middleware should be written in the `app.js` file
+- [X] Code to run the API located in the `server.js` file, where it sould import the Express application from the `app.js` code and then make sure it listens on port `3000`.
+- [X] A `GiftExchange` model that implements two different gift-exchange algorithms.
+- [X] An Express router living at the `/gift-exchange` endpoint to handle requests for the two different algorithms
+- [X] Logging and error-handling middleware to enable more seamless interaction with the API
 
 #### Stretch Feature:
 
@@ -37,14 +37,14 @@ By the end of this lab you will be able to...
 
 #### TDD Lab
 
-- [ ] Start by installing the core dependencies for this project with `npm install`.
-- [ ] Try running the tests in the terminal. They should all be failing, but that's ok. We'll use them to guide our development during this lab.
+- [X] Start by installing the core dependencies for this project with `npm install`.
+- [X] Try running the tests in the terminal. They should all be failing, but that's ok. We'll use them to guide our development during this lab.
 
 ```bash
 npm run test
 ```
 
-- [ ] To start the server in development mode run:
+- [X] To start the server in development mode run:
 
 ```bash
 npm run dev
@@ -52,8 +52,8 @@ npm run dev
 
 Running the tests along with the server requires having two terminal windows open:
 
-  - [ ] In one run the `npm run dev`
-  - [ ] In the other, run `npm run test:watch`
+  - [X] In one run the `npm run dev`
+  - [X] In the other, run `npm run test:watch`
 
 Then, every time a file is updated, the tests will be re-run. At the beginning, the `npm run dev` command will fail since we don't have a valid Express application to run. Let's fix that in the following steps!
 

@@ -9,7 +9,7 @@ app.use(morgan("tiny"));
 app.use(express.json());
 app.use("/gift-exchange", giftExchangeRouter);
 
-app.get("/", async (req, res, next) => {
+app.get("/", (req, res, next) => {
     res.status(200).json({ ping: "pong" });
 });
 
@@ -26,9 +26,5 @@ app.use((error, req, res, next) => {
         error: { message: message, status },
     });
 });
-
-// app.get("/gift-exchange", async (req, res, next) => {
-//     res.status(200).json({ ping: "pong" });
-// });
 
 module.exports = app;
